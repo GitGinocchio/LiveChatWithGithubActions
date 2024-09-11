@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulazione Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        #messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: scroll;
+            border-bottom: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        #message-box {
+            display: flex;
+            border-top: 1px solid #ddd;
+            background-color: #fff;
+        }
+        #message-input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        #send-button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        #send-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="messages">
+            <!-- Messaggi simulati -->
+            <p><strong>Utente1:</strong> Ciao, come stai?</p>
+            <p><strong>Utente2:</strong> Bene, grazie! E tu?</p>
+            <p><strong>Utente1:</strong> Anch'io sto bene. Grazie per chiedere.</p>
+            <!-- Fine dei messaggi simulati -->
+        </div>
+        <div id="message-box">
+            <input type="text" id="message-input" placeholder="Scrivi un messaggio..." />
+            <button id="send-button" onclick="window.location.href='https://github.com/GitGinocchio/live-chat-with-github-actions/issues/1'">Invia</button>
+        </div>
+    </div>
+</body>
+</html>
