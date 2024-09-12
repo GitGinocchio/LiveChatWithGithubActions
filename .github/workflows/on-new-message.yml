@@ -32,7 +32,7 @@ jobs:
       - name: Respond to comment
         if: ${{ success() }}
         env:
-          COMMENTS: ${{ github.event.comments }}
+          COMMENTS: ${{ steps.get-comments.outputs.comments }}
         shell: bash
         run: |
           python main.py
