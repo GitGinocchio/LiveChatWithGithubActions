@@ -12,14 +12,14 @@ jobs:
         id: check_issue
         run: |
           if [ "${{ github.event.issue.number }}" -eq 1 ]; then
-            echo "Comment is on the chat issue."
+            export IS_ON_CHAT_ISSUE=true
           else
-            echo "Not a comment on the chat issue. Exiting."
+            export IS_ON_CHAT_ISSUE=false
             exit 0
           fi
 
       - name: Respond to comment
-        if: ${{ steps.check_issue.outputs.result == 'Comment is on the chat issue.' }}
+        if: ${{ env.IS_ON_CHAT_ISSUE == "true" }}
         env:
           comments: ${{ github.event.comments }}
         run: |
