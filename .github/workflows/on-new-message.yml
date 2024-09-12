@@ -29,6 +29,16 @@ jobs:
             exit 1
           fi
 
+      - name: Get comments
+        if: ${{ success() }}
+        env:
+          COMMENTS: ${{ steps.get-comments.outputs.comments }}
+        run: |
+          comments=()
+          for comment in github.event.issue.comments:
+            comments+=([[comment.text]])
+          echo "COMMENTS=$comments" >> $GITHUB_ENV
+
       - name: Respond to comment
         if: ${{ success() }}
         env:
