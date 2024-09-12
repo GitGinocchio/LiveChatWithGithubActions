@@ -1,0 +1,25 @@
+name: Handle New Comments
+
+on:
+  issue_comment:
+    types: [created, edited]  # Trigger workflow when a comment is created or modified
+
+jobs:
+  handle_comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if comment is on the chat issue
+        id: check_issue
+        run: |
+          if [ "${{ github.event.issue.number }}" -eq 1 ]; then
+            echo "Comment is on the chat issue."
+          else
+            echo "Not a comment on the chat issue. Exiting."
+            exit 0
+          fi
+
+      - name: Respond to comment
+        if: ${{ steps.check_issue.outputs.result == 'Comment is on the chat issue.' }}
+        env:
+          comments: ${{ github.event.comments }}
+        run: python ${{ github.action_path }}/main.py
