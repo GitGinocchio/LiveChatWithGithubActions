@@ -18,7 +18,7 @@ jobs:
     
       - name: Install Python dependencies
         shell: bash
-        run: python -m pip install -r ${{ github.action_path }}/action-requirements.txt
+        run: python -m pip install -r ${{ github.action_path }}../../action-requirements.txt
       
       - name: Check if comment is on the chat issue
         id: check_issue
