@@ -9,7 +9,13 @@ GITHUB_REPOSITORY = os.environ['GITHUB_REPOSITORY']
 GITHUB_ISSUE_NUMBER = os.environ['GITHUB_ISSUE_NUMBER']
 GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
 
-comments = requests.get(f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPOSITORY}/issues/{GITHUB_ISSUE_NUMBER}/comments").json()
+comments = requests.get(
+    f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPOSITORY}/issues/{GITHUB_ISSUE_NUMBER}/comments",
+    headers={
+        "Authorization": f"token {GITHUB_TOKEN}",
+        "Accept" : "application/vnd.github.v3+json"
+        }
+    ).json()
 
 print(comments)
 
