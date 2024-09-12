@@ -22,4 +22,5 @@ jobs:
         if: ${{ steps.check_issue.outputs.result == 'Comment is on the chat issue.' }}
         env:
           comments: ${{ github.event.comments }}
-        run: python ${{ github.action_path }}/main.py
+        run: |
+          python ${{ github.action_path }}/main.py
