@@ -19,7 +19,7 @@ jobs:
           fi
 
       - name: Respond to comment
-        if: ${{ env.IS_ON_CHAT_ISSUE }}
+        if: ${{ env.IS_ON_CHAT_ISSUE == true }}
         env:
           comments: ${{ github.event.comments }}
         run: |
