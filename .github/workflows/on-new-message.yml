@@ -15,11 +15,6 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
-        
-      - name: test
-        shell: bash
-        run: |
-          ls
     
       - name: Install Python dependencies
         shell: bash
@@ -37,7 +32,15 @@ jobs:
       - name: Respond to comment
         if: ${{ success() }}
         env:
-          comments: ${{ github.event.comments }}
+          COMMENTS: ${{ github.event.comments }}
         shell: bash
         run: |
           python main.py
+
+      - name: Commit Changes
+        id: "add-and-commit"
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "docs(svgs): Chat updated"
+          author_name: "GitHub Actions"
+          author_email: "41898282+github-actions[bot]@users.noreply.github.com"

@@ -3,7 +3,7 @@ import os
 
 env = Environment(loader=FileSystemLoader('templates'))
 
-print(os.environ['comments'])
+print("Comments:", os.environ['COMMENTS'])
 
 template = env.get_template('chat-v1.svg')
 
