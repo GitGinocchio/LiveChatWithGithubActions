@@ -4,7 +4,6 @@ import os
 
 env = Environment(loader=FileSystemLoader('templates'))
 
-GITHUB_REPO_OWNER = os.environ['GITHUB_REPO_OWNER']
 GITHUB_REPOSITORY = os.environ['GITHUB_REPOSITORY']
 GITHUB_ISSUE_NUMBER = os.environ['GITHUB_ISSUE_NUMBER']
 GITHUB_TOKEN = os.environ['GITHUB_TOKEN']

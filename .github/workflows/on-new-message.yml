@@ -32,7 +32,6 @@ jobs:
       - name: Respond to comment
         if: ${{ success() }}
         env:
-          GITHUB_REPO_OWNER: ${{ github.repository_owner }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_ISSUE_NUMBER: ${{ github.event.issue.number }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
