@@ -1,9 +1,7 @@
 <svg width="400" height="300">
-  <!--
   <filter id="shadow">
     <feDropShadow dx="0" dy="-0.1" stdDeviation="2" />
   </filter>
-  -->
   <!-- Container -->
   <g>
     <rect x="0" y="0" width="360" height="240" fill="#333333" rx="10" />
@@ -26,12 +24,12 @@
     </g>
     <!-- Message Input -->
     <g transform="translate(20, 230)" font-size="18" filter="url(#shadow)">
-      <rect x="0" y="0" width="340" height="40" fill="#555555" rx="10" xlink:href="https://github.com/GitGinocchio/live-chat-with-github-actions/issues/1" />
+      <rect x="0" y="0" width="340" height="40" fill="#555555" rx="10" href="https://github.com/GitGinocchio/live-chat-with-github-actions/issues/1" />
       <text x="10" y="25" fill="#FFF3" font-size="15">Write a message...</text>
     </g>
     <!-- Send Button -->
     <g transform="translate(295, 235)" font-size="18">
-      <rect x="0" y="0" width="60" height="30" rx="10" fill="#2E865F" xlink:href="https://github.com/GitGinocchio/live-chat-with-github-actions/issues/1" />
+      <rect x="0" y="0" width="60" height="30" rx="10" fill="#2E865F" href="https://github.com/GitGinocchio/live-chat-with-github-actions/issues/1" />
       <text x="15" y="20" fill="#FFFD" font-size="15" font-weight="bold">Send</text>
     </g>
   </g>
