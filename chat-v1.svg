@@ -1,7 +1,9 @@
 <svg width="400" height="300">
+  <!--
   <filter id="shadow">
     <feDropShadow dx="0" dy="-0.1" stdDeviation="2" />
   </filter>
+  -->
   <!-- Container -->
   <g>
     <rect x="0" y="0" width="360" height="240" fill="#333333" rx="10" />
