@@ -1,6 +1,5 @@
 from jinja2 import Environment, FileSystemLoader
 import requests
-import os
 
 env = Environment(loader=FileSystemLoader('templates'))
 
