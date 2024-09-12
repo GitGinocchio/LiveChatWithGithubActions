@@ -11,7 +11,7 @@ jobs:
       - name: Check if comment is on the chat issue
         id: check_issue
         run: |
-          if [ "${{ github.event.issue.number }}" -eq 1 ]; then
+          if [ "${{ github.event.issue.number }}" -eq "1" ]; then
             export IS_ON_CHAT_ISSUE=true
           else
             export IS_ON_CHAT_ISSUE=false
