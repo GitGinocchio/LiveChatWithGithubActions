@@ -6,8 +6,7 @@
   <g>
     <rect x="0" y="0" width="360" height="240" fill="#333333" rx="10" />
     <!-- Message List -->
-    <g font-size="15" fill="#FFFD">
-    </g>
+    <g font-size="15" fill="#FFFD"></g>
     <!-- Message Input -->
     <g transform="translate(20, 230)" font-size="18" filter="url(#shadow)">
       <rect x="0" y="0" width="340" height="40" fill="#555555" rx="10" xlink:href="https://github.com/GitGinocchio/live-chat-with-github-actions/issues/1" />
