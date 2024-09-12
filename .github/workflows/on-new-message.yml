@@ -29,20 +29,13 @@ jobs:
             exit 1
           fi
 
-      - name: Get comments
-        if: ${{ success() }}
-        env:
-          COMMENTS: ${{ steps.get-comments.outputs.comments }}
-        run: |
-          comments=()
-          for comment in github.event.issue.comments:
-            comments+=([[comment.text]])
-          echo "COMMENTS=$comments" >> $GITHUB_ENV
-
       - name: Respond to comment
         if: ${{ success() }}
         env:
-          COMMENTS: ${{ steps.get-comments.outputs.comments }}
+          GITHUB_REPO_OWNER: ${{ github.repository_owner }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
           python main.py
