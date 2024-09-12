@@ -1,4 +1,4 @@
 # live-chat-with-github-actions
 
 
-[![Your SVG Image](chat-v1.svg)](chat-v1.svg)
+[![Chat in a README file](https://raw.githubusercontent.com/GitGinocchio/live-chat-with-github-actions/main/chat-v1.svg)](https://raw.githubusercontent.com/GitGinocchio/live-chat-with-github-actions/main/chat-v1.svg)
