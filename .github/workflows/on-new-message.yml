@@ -8,6 +8,18 @@ jobs:
   handle_comment:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+    
+      - name: Install Python dependencies
+        shell: bash
+        run: python -m pip install -r ${{ github.action_path }}/action-requirements.txt
+      
       - name: Check if comment is on the chat issue
         id: check_issue
         run: |
@@ -21,5 +33,6 @@ jobs:
         if: ${{ success() }}
         env:
           comments: ${{ github.event.comments }}
+        shell: bash
         run: |
           python ${{ github.action_path }}/main.py
