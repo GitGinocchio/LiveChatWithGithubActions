@@ -19,7 +19,7 @@ jobs:
       - name: test
         shell: bash
         run: |
-          ls -a
+          ls
     
       - name: Install Python dependencies
         shell: bash
