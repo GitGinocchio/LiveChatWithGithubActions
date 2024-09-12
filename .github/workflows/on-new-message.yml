@@ -12,14 +12,13 @@ jobs:
         id: check_issue
         run: |
           if [ "${{ github.event.issue.number }}" -eq "1" ]; then
-            export IS_ON_CHAT_ISSUE=true
-          else
-            export IS_ON_CHAT_ISSUE=false
             exit 0
+          else
+            exit 1
           fi
 
       - name: Respond to comment
-        if: ${{ env.IS_ON_CHAT_ISSUE == true }}
+        if: ${{ success() }}
         env:
           comments: ${{ github.event.comments }}
         run: |
