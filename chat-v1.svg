@@ -7,20 +7,9 @@
     <rect x="0" y="0" width="360" height="240" fill="#333333" rx="10" />
     <!-- Message List -->
     <g font-size="15" fill="#FFFD">
-    
-    
       <text x="10" y="30" font-size="15">GitGinocchio: Per favore pt. 4</text>
-    
-    
-    
       <text x="10" y="60" font-size="15">GitGinocchio: Ciao</text>
-    
-    
-    
       <text x="10" y="90" font-size="15">GitGinocchio: Ciao pt. 2</text>
-    
-    
-    
     </g>
     <!-- Message Input -->
     <g transform="translate(20, 230)" font-size="18" filter="url(#shadow)">
