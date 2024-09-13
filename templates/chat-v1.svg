@@ -1,4 +1,4 @@
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <filter id="shadow">
     <feDropShadow dx="0" dy="-0.1" stdDeviation="2" />
   </filter>
@@ -23,7 +23,7 @@
     </g>
     <!-- Send Button -->
     <g transform="translate(295, 235)" font-size="18">
-      <a href="https://github.com/GitGinocchio/live-chat-with-github-actions/issues/1">
+      <a xlink:href="https://github.com/GitGinocchio/live-chat-with-github-actions/issues/1">
         <rect x="0" y="0" width="60" height="30" rx="10" fill="#2E865F" />
         <text x="15" y="20" fill="#FFFD" font-size="15" font-weight="bold">Send</text>
       </a>
