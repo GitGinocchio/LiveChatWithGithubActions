@@ -21,6 +21,10 @@
     
     
     
+      <text x="10" y="120" font-size="15">GitGinocchio: Hellooo!</text>
+    
+    
+    
     </g>
     <!-- Message Input -->
     <g transform="translate(20, 230)" font-size="18" filter="url(#shadow)">
